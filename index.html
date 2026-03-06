@@ -9,7 +9,7 @@
       --bg: #08030f;
       --card: rgba(255, 255, 255, 0.08);
       --text: #ffffff;
-      --muted: rgba(255, 255, 255, 0.75);
+      --muted: rgba(255, 255, 255, 0.78);
       --pink: #ff3dbf;
       --blue: #20f6ff;
       --yellow: #ffe45c;
@@ -21,15 +21,16 @@
 
     body {
       margin: 0;
+      min-height: 100vh;
+      padding: 28px;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
+      text-align: center;
       background:
         radial-gradient(circle at 15% 20%, rgba(255, 61, 191, 0.35), transparent 25%),
         radial-gradient(circle at 80% 70%, rgba(32, 246, 255, 0.28), transparent 28%),
         radial-gradient(circle at 50% 100%, rgba(255, 228, 92, 0.08), transparent 30%),
         var(--bg);
-      min-height: 100vh;
-      padding: 28px;
     }
 
     .wrap {
@@ -47,10 +48,10 @@
       box-shadow:
         0 0 18px rgba(255, 61, 191, 0.18),
         0 0 40px rgba(32, 246, 255, 0.08);
+      text-align: center;
     }
 
     .hero {
-      text-align: center;
       padding: 42px 24px;
     }
 
@@ -71,21 +72,21 @@
       text-shadow:
         0 0 8px var(--pink),
         0 0 18px var(--pink),
-        0 0 30px rgba(32,246,255,0.5);
+        0 0 30px rgba(32, 246, 255, 0.5);
     }
 
     .subtitle {
       font-size: 1.15rem;
       color: var(--muted);
-      max-width: 520px;
+      max-width: 560px;
       margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .neon {
       color: var(--blue);
       font-weight: bold;
-      text-shadow: 0 0 10px rgba(32,246,255,0.8);
+      text-shadow: 0 0 10px rgba(32, 246, 255, 0.8);
     }
 
     .pink {
@@ -95,7 +96,7 @@
 
     .section-title {
       font-size: 1.25rem;
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       color: var(--yellow);
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -112,7 +113,6 @@
     }
 
     .big-info {
-      text-align: center;
       font-size: clamp(1.8rem, 5vw, 3.4rem);
       font-weight: bold;
       line-height: 1.15;
@@ -130,17 +130,22 @@
       text-shadow: 0 0 10px rgba(255,61,191,0.85);
     }
 
+    .dresscode-text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      max-width: 620px;
+      margin: 0 auto 12px;
+    }
+
     .note {
       margin-top: 12px;
-      text-align: center;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-style: italic;
     }
 
     .button-wrap {
-      text-align: center;
-      margin-top: 18px;
+      margin-top: 20px;
     }
 
     .btn {
@@ -184,6 +189,10 @@
       .hero {
         padding: 34px 18px;
       }
+
+      .dresscode-text {
+        font-size: 1.08rem;
+      }
     }
   </style>
 </head>
@@ -202,13 +211,13 @@
 
     <section class="card">
       <h2 class="section-title">Belangrijk cultureel bericht</h2>
-      <p>
+      <p class="dresscode-text">
         Sommige feestjes hebben een vaag thema en dan sta je daar ineens in een trui terwijl iemand anders eruitziet alsof die net van de afterparty van Studio 54 komt.
       </p>
-      <p>
+      <p class="dresscode-text">
         Dat wilden wij vermijden.
       </p>
-      <p>
+      <p class="dresscode-text">
         Dus hierbij heel duidelijk:
       </p>
       <p class="big-info">
@@ -221,18 +230,31 @@
     </section>
 
     <section class="card">
-      <p class="big-info"><span class="accent">4/4</span></p>
-      <p class="note">Ja, dat is de datum.</p>
+      <p class="big-info">
+        <span class="accent">Zaterdag 4 april</span>
+      </p>
+      <p class="note">
+        Samen aftellen tot onze verjaardag op 5 april.
+      </p>
     </section>
 
     <section class="card">
-      <p class="big-info">Welkom vanaf <span class="accent2">19u30</span></p>
-      <p class="note">Niet stipt om 19u29 buiten staan bibberen aub.</p>
+      <p class="big-info">
+        Welkom vanaf <span class="accent2">19u30</span>
+      </p>
+      <p class="note">
+        Niet stipt om 19u29 buiten staan bibberen aub.
+      </p>
     </section>
 
     <section class="card">
-      <p class="big-info"><span class="accent">Barvista</span><br>Leuven</p>
-      <p class="note">De locatie van de festiviteiten.</p>
+      <p class="big-info">
+        <span class="accent">Barvista</span><br>
+        Leuven
+      </p>
+      <p class="note">
+        De locatie van de festiviteiten.
+      </p>
     </section>
 
     <section class="card">
@@ -244,7 +266,7 @@
         In het formulier kan je aanduiden of je komt <strong>zonder +1</strong> of <strong>met +1</strong>.
       </p>
       <div class="button-wrap">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSelVehaIhjuawNZdh50oScTElXvkV7-rh9aUOVr0aFjW3Y34A/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://forms.gle/JOUW-LINK-HIER" target="_blank" rel="noopener noreferrer">
           Bevestig je komst
         </a>
       </div>
