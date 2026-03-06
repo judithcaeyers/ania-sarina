@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anïa & Sarina’s 30ste verjaardag</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top, #ff4fd8 0%, transparent 30%),
+        radial-gradient(circle at bottom right, #00f7ff 0%, transparent 25%),
+        linear-gradient(135deg, #120018, #05010a 70%);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .card {
+      max-width: 680px;
+      width: 100%;
+      padding: 48px 32px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 0 30px rgba(255, 79, 216, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(0, 247, 255, 0.12);
+      color: #00f7ff;
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      margin: 0 0 12px;
+      color: #fff;
+      text-shadow: 0 0 12px rgba(255, 79, 216, 0.8);
+    }
+
+    h2 {
+      margin: 0 0 28px;
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #ffd5f7;
+    }
+
+    p {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      margin: 10px 0;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .highlight {
+      color: #00f7ff;
+      font-weight: bold;
+    }
+
+    .theme {
+      color: #ff4fd8;
+      font-weight: bold;
+    }
+
+    .button-wrap {
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 28px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff4fd8, #00f7ff);
+      color: #0b0412;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 0 24px rgba(255, 79, 216, 0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 30px rgba(0, 247, 255, 0.35);
+    }
+
+    .small {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.72);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">Uitnodiging</div>
+    <h1>Anïa & Sarina’s 30ste</h1>
+    <h2>Neongala</h2>
+
+    <p>Wij worden 30 en dat vieren we graag samen met jullie.</p>
+    <p>Trek je beste <span class="theme">neongala</span>-outfit aan en kom mee klinken, dansen en shinen.</p>
+
+    <p><span class="highlight">Datum:</span> 4/4</p>
+    <p><span class="highlight">Welkom vanaf:</span> 19u30</p>
+    <p><span class="highlight">Locatie:</span> Barvista, Leuven</p>
+
+    <div class="button-wrap">
+      <a class="btn" href="https://forms.gle/JOUW-LINK-HIER" target="_blank" rel="noopener noreferrer">
+        Bevestig hier je komst
+      </a>
+    </div>
+
+    <p class="small">In het formulier kan je aanduiden of je komt met of zonder +1.</p>
+  </div>
+</body>
+</html>
