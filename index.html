@@ -5,124 +5,254 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anïa & Sarina’s 30ste verjaardag</title>
   <style>
+    :root {
+      --bg: #08030f;
+      --card: rgba(255, 255, 255, 0.08);
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.75);
+      --pink: #ff3dbf;
+      --blue: #20f6ff;
+      --yellow: #ffe45c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
       background:
-        radial-gradient(circle at top, #ff4fd8 0%, transparent 30%),
-        radial-gradient(circle at bottom right, #00f7ff 0%, transparent 25%),
-        linear-gradient(135deg, #120018, #05010a 70%);
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      padding: 24px;
+        radial-gradient(circle at 15% 20%, rgba(255, 61, 191, 0.35), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(32, 246, 255, 0.28), transparent 28%),
+        radial-gradient(circle at 50% 100%, rgba(255, 228, 92, 0.08), transparent 30%),
+        var(--bg);
+      min-height: 100vh;
+      padding: 28px;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     .card {
-      max-width: 680px;
-      width: 100%;
-      padding: 48px 32px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 28px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 0 30px rgba(255, 79, 216, 0.35);
+      padding: 32px 24px;
+      margin-bottom: 18px;
       backdrop-filter: blur(10px);
+      box-shadow:
+        0 0 18px rgba(255, 61, 191, 0.18),
+        0 0 40px rgba(32, 246, 255, 0.08);
     }
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(0, 247, 255, 0.12);
-      color: #00f7ff;
-      font-size: 0.9rem;
-      font-weight: bold;
-      letter-spacing: 1px;
+    .hero {
+      text-align: center;
+      padding: 42px 24px;
+    }
+
+    .tiny {
       text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      color: var(--yellow);
+      margin-bottom: 14px;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 6vw, 4.2rem);
-      margin: 0 0 12px;
-      color: #fff;
-      text-shadow: 0 0 12px rgba(255, 79, 216, 0.8);
+      margin: 0 0 10px;
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: white;
+      text-shadow:
+        0 0 8px var(--pink),
+        0 0 18px var(--pink),
+        0 0 30px rgba(32,246,255,0.5);
     }
 
-    h2 {
-      margin: 0 0 28px;
-      font-size: 1.2rem;
-      font-weight: normal;
-      color: #ffd5f7;
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .neon {
+      color: var(--blue);
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(32,246,255,0.8);
+    }
+
+    .pink {
+      color: var(--pink);
+      font-weight: bold;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      margin: 0 0 12px;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     p {
-      font-size: 1.08rem;
+      margin: 0 0 12px;
       line-height: 1.7;
-      margin: 10px 0;
-      color: rgba(255, 255, 255, 0.92);
+      color: var(--text);
     }
 
-    .highlight {
-      color: #00f7ff;
-      font-weight: bold;
+    .muted {
+      color: var(--muted);
     }
 
-    .theme {
-      color: #ff4fd8;
+    .big-info {
+      text-align: center;
+      font-size: clamp(1.8rem, 5vw, 3.4rem);
       font-weight: bold;
+      line-height: 1.15;
+      text-transform: uppercase;
+      text-shadow: 0 0 12px rgba(255,255,255,0.08);
+    }
+
+    .big-info .accent {
+      color: var(--blue);
+      text-shadow: 0 0 10px rgba(32,246,255,0.85);
+    }
+
+    .big-info .accent2 {
+      color: var(--pink);
+      text-shadow: 0 0 10px rgba(255,61,191,0.85);
+    }
+
+    .note {
+      margin-top: 12px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-style: italic;
     }
 
     .button-wrap {
-      margin-top: 34px;
+      text-align: center;
+      margin-top: 18px;
     }
 
     .btn {
       display: inline-block;
       padding: 16px 28px;
       border-radius: 999px;
-      background: linear-gradient(90deg, #ff4fd8, #00f7ff);
-      color: #0b0412;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
+      color: #0a0410;
+      background: linear-gradient(90deg, var(--pink), var(--blue));
+      box-shadow:
+        0 0 16px rgba(255,61,191,0.45),
+        0 0 24px rgba(32,246,255,0.35);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 0 24px rgba(255, 79, 216, 0.35);
     }
 
     .btn:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 0 30px rgba(0, 247, 255, 0.35);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow:
+        0 0 24px rgba(255,61,191,0.55),
+        0 0 34px rgba(32,246,255,0.45);
     }
 
-    .small {
-      margin-top: 18px;
+    .footer {
+      text-align: center;
+      color: var(--muted);
       font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.72);
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+
+      .card {
+        padding: 24px 18px;
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 34px 18px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="eyebrow">Uitnodiging</div>
-    <h1>Anïa & Sarina’s 30ste</h1>
-    <h2>Neongala</h2>
+  <div class="wrap">
 
-    <p>Wij worden 30 en dat vieren we graag samen met jullie.</p>
-    <p>Trek je beste <span class="theme">neongala</span>-outfit aan en kom mee klinken, dansen en shinen.</p>
+    <section class="card hero">
+      <div class="tiny">Uitnodiging</div>
+      <h1>Anïa & Sarina<br>worden 30</h1>
+      <p class="subtitle">
+        Oei.<br>
+        Weer zo’n licht overdreven verjaardagsuitnodiging.<br>
+        Alleen deze keer met <span class="neon">meer glow</span>, <span class="pink">meer drama</span> en hopelijk ook meer dansmoves.
+      </p>
+    </section>
 
-    <p><span class="highlight">Datum:</span> zaterdag 04/04/2026</p>
-    <p><span class="highlight">Welkom vanaf:</span> 19u30</p>
-    <p><span class="highlight">Locatie:</span> Barvista, Leuven</p>
+    <section class="card">
+      <h2 class="section-title">Belangrijk cultureel bericht</h2>
+      <p>
+        Sommige feestjes hebben een vaag thema en dan sta je daar ineens in een trui terwijl iemand anders eruitziet alsof die net van de afterparty van Studio 54 komt.
+      </p>
+      <p>
+        Dat wilden wij vermijden.
+      </p>
+      <p>
+        Dus hierbij heel duidelijk:
+      </p>
+      <p class="big-info">
+        Dresscode:<br>
+        <span class="accent2">NEONGALA</span>
+      </p>
+      <p class="note">
+        Neon, overdressed, shiny, questionable fashion choices: allemaal welkom.
+      </p>
+    </section>
 
-    <div class="button-wrap">
-      <a class="btn" href="https://forms.gle/JOUW-LINK-HIER" target="_blank" rel="noopener noreferrer">
-        Bevestig dat je komt!
-      </a>
-    </div>
+    <section class="card">
+      <p class="big-info"><span class="accent">4/4</span></p>
+      <p class="note">Ja, dat is de datum.</p>
+    </section>
+
+    <section class="card">
+      <p class="big-info">Welkom vanaf <span class="accent2">19u30</span></p>
+      <p class="note">Niet stipt om 19u29 buiten staan bibberen aub.</p>
+    </section>
+
+    <section class="card">
+      <p class="big-info"><span class="accent">Barvista</span><br>Leuven</p>
+      <p class="note">De locatie van de festiviteiten.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Praktisch maar met liefde</h2>
+      <p>
+        Laat even weten of je erbij bent.
+      </p>
+      <p>
+        In het formulier kan je aanduiden of je komt <strong>zonder +1</strong> of <strong>met +1</strong>.
+      </p>
+      <div class="button-wrap">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSelVehaIhjuawNZdh50oScTElXvkV7-rh9aUOVr0aFjW3Y34A/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+          Bevestig je komst
+        </a>
+      </div>
+    </section>
+
+    <p class="footer">
+      Wij kijken uit naar een avond vol neon, chaos en vermoedelijk minstens één slechte foto.
+    </p>
 
   </div>
 </body>
