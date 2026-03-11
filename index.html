@@ -46,15 +46,8 @@ opacity:.25;
 pointer-events:none;
 }
 
-body::before{
-top:40px;
-left:40px;
-}
-
-body::after{
-bottom:40px;
-right:40px;
-}
+body::before{top:40px;left:40px;}
+body::after{bottom:40px;right:40px;}
 
 .wrap{
 max-width:760px;
@@ -117,6 +110,44 @@ margin-top:12px;
 color:var(--muted);
 font-size:1rem;
 font-style:italic;
+}
+
+/* RSVP section */
+
+.rsvp{
+background:linear-gradient(135deg,var(--yellow),var(--pink));
+color:#3a2c00;
+padding:40px 28px;
+border-radius:30px;
+margin:30px 0;
+box-shadow:0 12px 35px rgba(0,0,0,0.15);
+}
+
+.rsvp h2{
+margin-top:0;
+font-size:2rem;
+}
+
+.rsvp p{
+font-size:1.2rem;
+margin-bottom:24px;
+}
+
+.rsvp-btn{
+display:inline-block;
+font-size:1.2rem;
+font-weight:bold;
+padding:18px 32px;
+border-radius:999px;
+background:white;
+color:#333;
+text-decoration:none;
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+transition:.2s;
+}
+
+.rsvp-btn:hover{
+transform:translateY(-3px) scale(1.05);
 }
 
 .footer{
@@ -216,6 +247,29 @@ Neon, paasglam, questionable fashion choices: allemaal welkom.
 </p>
 
 </section>
+
+
+<!-- RSVP SECTION -->
+
+<section class="rsvp">
+
+<h2>Laat weten of je komt</h2>
+
+<p>
+Ook de apostelen moesten RSVP'en.<br>
+Klik hieronder en bevestig je aanwezigheid.
+</p>
+
+<a class="rsvp-btn"
+href="https://forms.gle/JOUW-LINK-HIER"
+target="_blank">
+
+🐣 IK KOM ZONDIGEN
+
+</a>
+
+</section>
+
 
 <section class="card">
 
